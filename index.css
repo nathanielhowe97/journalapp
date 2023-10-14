@@ -1,0 +1,127 @@
+:root{
+    --clr-0: #1b1c1d;
+    --clr-10: #141515;
+    --clr-20: #707676;
+    --clr-100: #e1e8ea;
+    --clr-110: #f6f8f8;
+
+    --clr-orange: #e0ba69;
+    --clr-accent: #73b9d2;
+    --clr-error: #ad453d;
+
+    --ff-serif: 'Merriweather', serif;
+    --ff-sans: 'AR One Sans'
+}
+
+nav{
+    width: 75%;
+    margin-inline:auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--clr-orange);
+    font-family: var(--ff-serif);
+}
+
+section:nth-of-type(1){
+    height:25dvh;
+}
+
+section{
+    min-height:25dvh;
+    width:75%;
+    margin-inline:auto;
+
+    border-radius: 1rem;
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+
+    padding:1rem 2rem;
+    margin-block:1rem;
+
+    text-align: left;
+
+    text-wrap: balance;
+
+    background-color: var(--clr-0);
+
+    & h1{
+        font-family: var(--ff-serif);
+        color: var(--clr-orange);
+        margin-block:0rem;
+    }
+
+    & p{
+        font-family: var(--ff-sans);
+        margin-block:1rem 2rem;
+    }
+
+    & a{
+        border:1px solid var(--clr-orange);
+        display:inline;
+        width:15ch;
+        padding:0.5rem .75rem;
+        text-align: center;
+        border-radius:0.5rem;
+
+        color: var(--clr-orange);
+        text-decoration: none;
+
+        transition: .2s linear;
+        user-select: none;
+
+        &:hover{
+            background-color: var(--clr-orange);
+            color: var(--clr-10)
+        }
+    }
+}
+
+.col-left{
+    max-width:75%;
+}
+
+.col-right{
+    max-width: 25%;
+    user-select: none;
+
+    & img{
+        margin-top:3rem;
+        width:80%;
+        height:60%;
+        transform: rotate(-17deg);
+
+    }
+}
+
+ul{
+    list-style:circle;
+    padding-inline:1rem;
+
+    & li{
+        margin-block:-1rem;
+    }
+}
+
+@media only screen and (max-width:500px){
+    section{
+        min-height:32dvh;   
+        max-width:90%;
+        margin-inline:auto;
+
+        & .col-left{
+            max-width:100%;
+        }
+
+        & img{
+            display:none;
+        }
+    }
+}
+
+h1{
+    display:block !important
+}
